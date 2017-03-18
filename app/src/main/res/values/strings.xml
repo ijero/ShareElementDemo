@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">共享元素动画Demo</string>
+    <string name="str_loading_data">正在加载数据</string>
+    <string name="str_picture_list">图片列表</string>
+    <string name="str_picture_detail">图片详情</string>
+
+</resources>
