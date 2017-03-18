@@ -82,7 +82,7 @@ AndroidManifest.xml
 
 ```
 注意：用来做共享元素动画的Activity的主题（Theme）必须继承自android:Theme.Material.XXX。
-即是因为Material Design引入的，所以只有在V21的主题包下才有这个主题。
+即是因为Material Design引入的，所以在V21的以上的版本主题包下才有这个主题。
 我们平时使用的Theme.AppCompat.Light.DarkActionBar，
 它的V21包对应的正是继承自Theme.Material.Light.NoActionBar，
 所以默认在V21版本以上能支持共享元素动画。
