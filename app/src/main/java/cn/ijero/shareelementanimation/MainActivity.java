@@ -1,9 +1,14 @@
 package cn.ijero.shareelementanimation;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.ActivityOptionsCompat;
+import android.support.v4.content.ContextCompat;
+import android.support.v4.content.res.ResourcesCompat;
+import android.support.v4.view.ViewCompat;
 import android.support.v4.widget.ContentLoadingProgressBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
@@ -164,7 +169,8 @@ public class MainActivity extends AppCompatActivity implements Callback, ImageAd
 
         intent.putExtra("bitmap", bitmapByte);
         intent.putExtra("imageUrl", imgsBean);
-        startActivity(intent, ActivityOptionsCompat.makeSceneTransitionAnimation(this, view, Contract.SHARED_IMAGE_ELEMENT_NAME).toBundle());
+        Bundle options = ActivityOptionsCompat.makeSceneTransitionAnimation(this, view, Contract.SHARED_IMAGE_ELEMENT_NAME).toBundle();
+        ActivityCompat.startActivity(this,intent, options);
         view.setDrawingCacheEnabled(false);
     }
 
